@@ -1,0 +1,9 @@
+<?php
+
+use App\Http\Controllers\Main\IndexController;
+use Illuminate\Support\Facades\Route;
+
+
+Route::get('/', [IndexController::class, 'index'])->name('main.index');
+
+
