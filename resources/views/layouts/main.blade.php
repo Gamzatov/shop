@@ -14,7 +14,9 @@
     <link rel="stylesheet" href=" {{ asset('/adminlte/dist/css/adminlte.min.css') }}">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href=" {{ asset('/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
-
+    <!-- select -->
+    <link rel="stylesheet" href=" {{ asset('/adminlte/plugins/select2/css/select2.css') }}">
+{{--    <link rel="stylesheet" href=" {{ asset('/adminlte/plugins/select2-bootstrap4-theme/css/select2-bootstrap4.css') }}">--}}
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -153,7 +155,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('product.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-tshirt"></i>
                             <p>
                                 Products
@@ -161,7 +163,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('categories.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-list-ul"></i>
                             <p>
                                 Categories
@@ -169,7 +171,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('tag.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-tags"></i>
                             <p>
                                 Tags
@@ -177,7 +179,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('color.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-palette"></i>
                             <p>
                                 Colors
@@ -185,7 +187,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('user.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-users"></i>
                             <p>
                                 Users
@@ -236,6 +238,15 @@
 <script src="{{ asset('/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('/adminlte/dist/js/adminlte.js') }}"></script>
+<!-- Select -->
+{{--<script src="{{ asset('/adminlte/plugins/select2/js/select2.js') }}"></script>--}}
+<script src="{{ asset('/adminlte/plugins/select2/js/select2.full.js') }}"></script>
+<script>
+    $('.tags').select2()
+    $('.colors').select2()
+</script>
+
+
 
 </body>
 </html>
